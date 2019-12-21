@@ -1,0 +1,91 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html,body {
+    min-height: 100%;
+}
+body {
+	background-image: linear-gradient(aquamarine,pink);
+}
+
+div {
+	padding: 20px;
+
+}
+#todo {
+	width:35%;
+	margin:0 auto;
+	padding: 0px;
+	border:1px solid lightgrey;
+}
+
+.todos{
+	color:hotpink;
+	word-wrap: break-word;
+}
+
+li {
+	list-style-type: none;
+	font-style: italic;
+	padding-bottom: 10px;
+}
+
+.pink i{
+	margin-left: 15px;
+}
+
+span{
+	font-size: 20px;
+}
+
+h1 {
+	color:snow;
+	font-size: 40px;
+}
+
+button {
+	padding:20px;
+	margin-top: 50px;
+	width:32.5%;
+	border-radius: 5px;
+	background-color: aliceblue;
+	color:grey;
+	font-style: italic;
+}
+
+.tips button {
+	margin-top: 5px;
+}
+
+li i {
+	color:aquamarine;
+	margin-left: 15px;
+}
+
+input {
+	height:100%;
+	width:100%;
+	padding: 10px;
+	font-size:15px;
+}
+
+.pink {
+	background-color: pink;
+}
+
+.white {
+	background-color: white;
+}
+
+#tip {
+	margin-top: 20px;
+	display:none;
+}
+
+.hide {
+	padding:10px;
+	width:auto;
+}
+
+.checked{
+    text-decoration: line-through;
+}
