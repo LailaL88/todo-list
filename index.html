@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>To-Do List</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://kit.fontawesome.com/9abce3d2e8.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+	<div id="todo">
+		<div class="pink">
+            <em><h1>Мои списки дел <i class="fas fa-pencil-alt"></i></h1></em>
+        </div>
+            <input type="text" placeholder="Добавить список">
+        <div class="white">
+            <ul class="todos" id="list">
+                <!--<li><span class="todo-text"></span><span class="todo-trash">ghjj<i class="fas fa-eraser"></i></i></span></li>
+                <li><span class="todo-text"></span><span class="todo-trash">hjjj<i class="fas fa-eraser"></i></i></span></li>-->
+            </ul>
+                <button class="save">Сохранить</button>
+                <button class="clear" onclick="clearList()">Очистить</button>
+                <button class="showTips" onclick="showTips()"><em>Справка</em></button>
+            <ul class="tips" id="tip">
+                <li>Для добавления списка дел напишите текст в поле ввода и нажмите Ввод</li>
+                <li>Чтобы удалить один пункт, наведите на него и нажмите на значок резинки</li>
+                <li>Нажмите "Сохранить", чтобы сохранить список дел на потом</li>
+                <li>Чтобы удалить все списки дел, нажмите "Очистить"</li>
+                <li><button class = "hide" onclick="hideTips()">Скрыть справку</button></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
