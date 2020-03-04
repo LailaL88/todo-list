@@ -89,3 +89,22 @@ input {
 .lineThrough{
     text-decoration: line-through;
 }
+
+@media only screen and (max-width: 1040px) {
+    button {
+        display: block;
+        width: 90%;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    #todo {
+        width: 80%;
+    }
+    span {
+        font-size: 40px;
+    }
+    input {
+        font-size: 20px;
+        padding: 20px;
+    }
+}
