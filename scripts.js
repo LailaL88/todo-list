@@ -8,6 +8,7 @@ function onPageLoaded() {
     function createTodo() {
         
         const li = document.createElement("li");
+        li.classList.add("listitem");
         const textSpan = document.createElement("span");
         
         const newTodo = input.value;
