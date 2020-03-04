@@ -86,6 +86,6 @@ input {
 	width:auto;
 }
 
-.checked{
+.lineThrough{
     text-decoration: line-through;
 }
