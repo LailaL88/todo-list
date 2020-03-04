@@ -23,6 +23,18 @@ function onPageLoaded() {
         ul.appendChild(li).append(textSpan, deleteBtn);
         input.value = "";
         deleteButton(deleteBtn);
+        
+        let lis = document.querySelectorAll("li.listitem");
+
+        for (const item of lis) {
+            clickLi(item);
+        }
+
+        function clickLi(element) {
+            element.addEventListener("click", () => {
+                element.classList.add("lineThrough");
+            })
+        }
     }
 
     saveButton.addEventListener("click", () => {
