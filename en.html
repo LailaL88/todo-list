@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/9abce3d2e8.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body>
+    <div id="todo">
+        <div class="pink">
+            <a href="index.html"><img src="img/ru.png"></a>
+            <a href="en.html"><img src="img/uk.png"></a>
+            <em><h1>My todo list <i class="fas fa-pencil-alt"></i></h1></em>
+        </div>
+        <input type="text" placeholder="Add a new todo">
+        <div class="white">
+            <ul class="todos" id="list">
+                <!--<li><span class="todo-text"></span><span class="todo-trash">ghjj<i class="fas fa-eraser"></i></i></span></li>
+                <li><span class="todo-text"></span><span class="todo-trash">hjjj<i class="fas fa-eraser"></i></i></span></li>-->
+            </ul>
+            <button class="save">Save</button>
+            <button class="clear" onclick="clearList()">Clear</button>
+            <button class="showTips" onclick="showTips()"><em>Help</em></button>
+            <ul class="tips" id="tip">
+                <li>To add a todo item write in the input area and hit Enter</li>
+                <li>To delete a todo click on eraser icon</li>
+                <li>Click "Save" to save the todo list for later</li>
+                <li>To delete all todos click "Clear"</li>
+                <li>To cross out a todo click on it</li>
+                <li><button class="hide" onclick="hideTips()">Hide help info</button></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
