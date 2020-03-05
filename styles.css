@@ -11,6 +11,14 @@ div {
 	padding: 20px;
 
 }
+
+.pink img {
+    float: right;
+    height: 16px;
+    width: 32px;
+    padding-left: 10px;
+}
+
 #todo {
 	width:35%;
 	margin:0 auto;
