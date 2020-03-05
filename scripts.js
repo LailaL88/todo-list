@@ -1,4 +1,3 @@
-
 function onPageLoaded() {
     const input = document.querySelector("input[type='text']");
     const ul = document.querySelector("ul");
@@ -7,10 +6,9 @@ function onPageLoaded() {
     function createTodo() {
 
         const li = document.createElement("li");
-        
+
         const textSpan = document.createElement("span");
         textSpan.classList.add("listitem");
-        
         const newTodo = input.value;
         textSpan.append(newTodo);
 
@@ -24,7 +22,7 @@ function onPageLoaded() {
         ul.appendChild(li).append(textSpan, deleteBtn);
         input.value = "";
         deleteButton(deleteBtn);
-        clickLi(li);
+        clickLi(textSpan);
     }
 
     saveButton.addEventListener("click", () => {
