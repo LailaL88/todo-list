@@ -7,9 +7,10 @@ function onPageLoaded() {
     function createTodo() {
 
         const li = document.createElement("li");
-        li.classList.add("listitem");
+        
         const textSpan = document.createElement("span");
-
+        textSpan.classList.add("listitem");
+        
         const newTodo = input.value;
         textSpan.append(newTodo);
 
@@ -40,7 +41,7 @@ function onPageLoaded() {
             deleteButton(button);
         }
 
-        let lis = document.querySelectorAll("li.listitem");
+        let lis = document.querySelectorAll("span.listitem");
 
         for (const item of lis) {
             clickLi(item);
