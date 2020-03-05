@@ -1,20 +1,19 @@
 
-
 function onPageLoaded() {
     const input = document.querySelector("input[type='text']");
     const ul = document.querySelector("ul");
     const saveButton = document.querySelector("button.save");
 
     function createTodo() {
-        
+
         const li = document.createElement("li");
         li.classList.add("listitem");
         const textSpan = document.createElement("span");
-        
+
         const newTodo = input.value;
         textSpan.append(newTodo);
 
-   
+
         const deleteBtn = document.createElement("span");
         deleteBtn.classList.add("todo-trash");
         const icon = document.createElement("i");
@@ -24,42 +23,44 @@ function onPageLoaded() {
         ul.appendChild(li).append(textSpan, deleteBtn);
         input.value = "";
         deleteButton(deleteBtn);
-        
+        clickLi(li);
+    }
+
+    saveButton.addEventListener("click", () => {
+        localStorage.setItem("todos", ul.innerHTML);
+    });
+
+    function loadTodos() {
+        const data = localStorage.getItem("todos");
+        if (data) {
+            ul.innerHTML = data;
+        }
+        const deleteButtons = document.querySelectorAll("span.todo-trash");
+        for (const button of deleteButtons) {
+            deleteButton(button);
+        }
+
         let lis = document.querySelectorAll("li.listitem");
 
         for (const item of lis) {
             clickLi(item);
         }
 
-        function clickLi(element) {
-            element.addEventListener("click", () => {
-                element.classList.add("lineThrough");
-            })
-        }
     }
-
-    saveButton.addEventListener("click", () => {
-            localStorage.setItem("todos", ul.innerHTML);
-       });
-
-     function loadTodos() {
-        const data = localStorage.getItem("todos");
-        if (data) {
-            ul.innerHTML = data;
-           }
-        const deleteButtons = document.querySelectorAll("span.todo-trash");
-            for (const button of deleteButtons) {
-                deleteButton(button);
-            }
-        }
 
     loadTodos();
 
-     function deleteButton(element) {
+    function deleteButton(element) {
         element.addEventListener("click", (event) => {
             element.parentElement.remove();
             event.stopPropagation();
         });
+    }
+
+    function clickLi(element) {
+        element.addEventListener("click", () => {
+            element.classList.add("lineThrough");
+        })
     }
 
     input.addEventListener("keypress", (keyPressed) => {
@@ -72,19 +73,17 @@ function onPageLoaded() {
 
 document.addEventListener("DOMContentLoaded", onPageLoaded);
 
-function showTips(){
-        document.getElementById("tip").style.display = "block";
-    }
+function showTips() {
+    document.getElementById("tip").style.display = "block";
+}
 
-function hideTips(){
+function hideTips() {
     document.getElementById("tip").style.display = "none";
 }
 
-function clearList(){
+function clearList() {
     var clear = document.getElementById("list");
-    clear.innerHTML="";
+    clear.innerHTML = "";
 }
-
-
 
 
