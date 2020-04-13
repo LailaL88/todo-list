@@ -98,6 +98,10 @@ input {
     text-decoration: line-through;
 }
 
+.counter{
+	padding-top: 5px;
+}
+
 @media only screen and (max-width: 1040px) {
     button {
         display: block;
