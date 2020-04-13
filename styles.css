@@ -82,6 +82,7 @@ input {
 
 .white {
 	background-color: white;
+	overflow:hidden;
 }
 
 #tip {
@@ -101,7 +102,6 @@ input {
 .counter{
 	padding: 5px;
 	float:right;
-	overflow:hidden;
 }
 
 @media only screen and (max-width: 1040px) {
