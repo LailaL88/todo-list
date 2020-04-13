@@ -83,6 +83,7 @@ input {
 .white {
 	background-color: white;
 	overflow:hidden;
+	padding-bottom:1px;
 }
 
 #tip {
